@@ -1,17 +1,17 @@
-/* Variables - tema claro y colorido */
+/* Variables - tema claro en tonos amarillos / dorados */
 :root {
-  --bg: #f8f6fc;
+  --bg: #fffef7;
   --bg-card: #ffffff;
-  --bg-section: #f0ecf8;
-  --bg-section-alt: #faf8fd;
-  --accent: #e6a020;
-  --accent-light: #f5c84d;
-  --accent-pink: #e84d7a;
-  --accent-coral: #e8724a;
-  --accent-purple: #9575e6;
+  --bg-section: #fdf9eb;
+  --bg-section-alt: #fefce8;
+  --accent: #d4a020;
+  --accent-light: #f0c84d;
+  --accent-dark: #b8860b;
+  --accent-amber: #e8a830;
+  --accent-honey: #f5d030;
   --gold: #c4921f;
-  --text: #2d2640;
-  --text-muted: #6b6378;
+  --text: #3d3520;
+  --text-muted: #6b5d40;
 }
 
 html {
@@ -27,9 +27,9 @@ body {
 
 /* Navbar */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 254, 247, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(45, 38, 64, 0.08);
+  box-shadow: 0 2px 20px rgba(61, 53, 32, 0.06);
 }
 
 .navbar .logo {
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar-toggler {
-  border-color: rgba(45, 38, 64, 0.2);
+  border-color: rgba(61, 53, 32, 0.2);
 }
 
 .navbar-toggler-icon {
@@ -70,9 +70,9 @@ body {
     105deg,
     transparent 0%,
     transparent 35%,
-    rgba(232, 77, 122, 0.25) 45%,
-    rgba(230, 160, 32, 0.4) 50%,
-    rgba(149, 117, 230, 0.25) 55%,
+    rgba(245, 208, 77, 0.4) 45%,
+    rgba(232, 168, 48, 0.6) 50%,
+    rgba(212, 160, 32, 0.4) 55%,
     transparent 65%,
     transparent 100%
   );
@@ -86,9 +86,9 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--accent-pink) !important;
-  background: rgba(232, 77, 122, 0.1);
-  box-shadow: 0 2px 12px rgba(232, 77, 122, 0.2);
+  color: var(--accent-dark) !important;
+  background: rgba(232, 168, 48, 0.15);
+  box-shadow: 0 2px 12px rgba(212, 160, 32, 0.25);
 }
 
 .nav-link:hover::before {
@@ -113,12 +113,12 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(135deg, #faf8fd 0%, #f0e8fc 35%, #fce8f0 70%, #f8f6fc 100%);
+  background: linear-gradient(135deg, #fefce8 0%, #fdf9eb 35%, #fff4d4 70%, #fffef7 100%);
   background-image: 
-    radial-gradient(ellipse at 20% 80%, rgba(232, 77, 122, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(230, 160, 32, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(149, 117, 230, 0.1) 0%, transparent 55%),
-    linear-gradient(135deg, #faf8fd 0%, #f0e8fc 35%, #fce8f0 70%, #f8f6fc 100%);
+    radial-gradient(ellipse at 20% 80%, rgba(245, 208, 77, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(232, 168, 48, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(212, 160, 32, 0.12) 0%, transparent 55%),
+    linear-gradient(135deg, #fefce8 0%, #fdf9eb 35%, #fff4d4 70%, #fffef7 100%);
 }
 
 .hero-overlay {
@@ -137,7 +137,7 @@ body {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent), var(--accent-purple));
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent), var(--accent-amber));
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -151,20 +151,20 @@ body {
 }
 
 .btn-cta {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent) 50%, var(--accent-coral) 100%);
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 50%, var(--accent-amber) 100%);
   border: none;
   color: #fff;
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 50px;
-  box-shadow: 0 4px 24px rgba(232, 77, 122, 0.4), 0 2px 12px rgba(230, 160, 32, 0.25);
+  box-shadow: 0 4px 24px rgba(212, 160, 32, 0.4), 0 2px 12px rgba(232, 168, 48, 0.25);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-cta:hover {
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 32px rgba(232, 77, 122, 0.45), 0 4px 16px rgba(230, 160, 32, 0.3);
+  box-shadow: 0 6px 32px rgba(212, 160, 32, 0.5), 0 4px 16px rgba(232, 168, 48, 0.35);
 }
 
 /* Secciones comunes */
@@ -176,7 +176,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent), var(--accent-purple));
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent), var(--accent-amber));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -194,7 +194,7 @@ body {
 
 .servicio-card {
   background: var(--bg-card);
-  border: 1px solid rgba(45, 38, 64, 0.08);
+  border: 1px solid rgba(61, 53, 32, 0.08);
   border-radius: 16px;
   height: 100%;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -202,7 +202,7 @@ body {
 
 .servicio-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(232, 77, 122, 0.2), 0 8px 24px rgba(149, 117, 230, 0.12);
+  box-shadow: 0 12px 40px rgba(212, 160, 32, 0.22), 0 8px 24px rgba(232, 168, 48, 0.12);
 }
 
 .servicio-card .card-body {
@@ -214,9 +214,9 @@ body {
   margin-bottom: 1rem;
 }
 
-.servicios .servicio-card:nth-child(1) .servicio-icon { color: var(--accent-pink); }
+.servicios .servicio-card:nth-child(1) .servicio-icon { color: var(--accent-dark); }
 .servicios .servicio-card:nth-child(2) .servicio-icon { color: var(--accent); }
-.servicios .servicio-card:nth-child(3) .servicio-icon { color: var(--accent-purple); }
+.servicios .servicio-card:nth-child(3) .servicio-icon { color: var(--accent-amber); }
 
 .servicio-card .card-title {
   color: var(--text);
@@ -238,7 +238,7 @@ body {
   aspect-ratio: 1;
   background: var(--bg-card);
   border-radius: 12px;
-  border: 1px solid rgba(45, 38, 64, 0.08);
+  border: 1px solid rgba(61, 53, 32, 0.08);
 }
 
 /* Testimonios con Swiper */
@@ -256,7 +256,7 @@ body {
 
 .testimonio-card {
   background: var(--bg-card);
-  border: 1px solid rgba(45, 38, 64, 0.08);
+  border: 1px solid rgba(61, 53, 32, 0.08);
   border-radius: 16px;
   padding: 1.5rem;
   height: 100%;
@@ -266,12 +266,12 @@ body {
 }
 
 .testimonio-card:hover {
-  box-shadow: 0 8px 28px rgba(232, 77, 122, 0.2), 0 4px 16px rgba(149, 117, 230, 0.12);
+  box-shadow: 0 8px 28px rgba(212, 160, 32, 0.2), 0 4px 16px rgba(232, 168, 48, 0.12);
 }
 
 .testimonio-quote {
   font-size: 1.5rem;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent));
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -299,7 +299,7 @@ body {
   width: 48px;
   height: 48px;
   background: var(--bg-card);
-  border: 1px solid rgba(45, 38, 64, 0.12);
+  border: 1px solid rgba(61, 53, 32, 0.12);
   border-radius: 50%;
   color: var(--text);
   transition: background 0.2s;
@@ -311,18 +311,18 @@ body {
 }
 .swiper-testimonios .swiper-button-prev:hover,
 .swiper-testimonios .swiper-button-next:hover {
-  background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral));
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-amber));
   color: white;
   border-color: transparent;
 }
 
 .swiper-testimonios .swiper-pagination-bullet {
   background: var(--bg-section);
-  border: 1px solid rgba(45, 38, 64, 0.2);
+  border: 1px solid rgba(61, 53, 32, 0.2);
   opacity: 0.8;
 }
 .swiper-testimonios .swiper-pagination-bullet-active {
-  background: linear-gradient(135deg, var(--accent-pink), var(--accent));
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
   border-color: var(--accent);
   opacity: 1;
 }
@@ -334,11 +334,11 @@ body {
 
 .reserva-form {
   background: var(--bg-card);
-  border: 1px solid rgba(45, 38, 64, 0.08);
+  border: 1px solid rgba(61, 53, 32, 0.08);
   border-radius: 16px;
   max-width: 560px;
   margin: 0 auto;
-  box-shadow: 0 4px 24px rgba(45, 38, 64, 0.06);
+  box-shadow: 0 4px 24px rgba(61, 53, 32, 0.06);
 }
 
 .reserva-form .form-label {
@@ -348,15 +348,15 @@ body {
 
 .reserva-form .form-control {
   background: var(--bg);
-  border: 1px solid rgba(45, 38, 64, 0.15);
+  border: 1px solid rgba(61, 53, 32, 0.15);
   color: var(--text);
 }
 
 .reserva-form .form-control:focus {
   background: var(--bg-card);
-  border-color: var(--accent-pink);
+  border-color: var(--accent);
   color: var(--text);
-  box-shadow: 0 0 0 0.25rem rgba(232, 77, 122, 0.2);
+  box-shadow: 0 0 0 0.25rem rgba(212, 160, 32, 0.2);
 }
 
 .reserva-form .form-control::placeholder {
@@ -365,13 +365,13 @@ body {
 
 .reserva-form .form-select {
   background: var(--bg);
-  border: 1px solid rgba(45, 38, 64, 0.15);
+  border: 1px solid rgba(61, 53, 32, 0.15);
   color: var(--text);
 }
 .reserva-form .form-select:focus {
   background: var(--bg-card);
-  border-color: var(--accent-pink);
-  box-shadow: 0 0 0 0.25rem rgba(232, 77, 122, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.25rem rgba(212, 160, 32, 0.2);
   color: var(--text);
 }
 .reserva-form .form-select option {
@@ -379,25 +379,25 @@ body {
   color: var(--text);
 }
 
-/* Flatpickr: tema claro */
+/* Flatpickr: tema amarillo */
 .reserva-form .flatpickr-input {
   background: var(--bg) !important;
-  border: 1px solid rgba(45, 38, 64, 0.15);
+  border: 1px solid rgba(61, 53, 32, 0.15);
   color: var(--text);
 }
 .reserva-form .flatpickr-input:focus {
-  border-color: var(--accent-pink);
-  box-shadow: 0 0 0 0.25rem rgba(232, 77, 122, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.25rem rgba(212, 160, 32, 0.2);
 }
 .reserva-form .input-group-text.reserva-input-icon {
   background: var(--bg);
-  border: 1px solid rgba(45, 38, 64, 0.15);
-  color: var(--accent-pink);
+  border: 1px solid rgba(61, 53, 32, 0.15);
+  color: var(--accent);
 }
 .flatpickr-calendar {
   background: var(--bg-card) !important;
-  border: 1px solid rgba(45, 38, 64, 0.12) !important;
-  box-shadow: 0 12px 40px rgba(45, 38, 64, 0.15) !important;
+  border: 1px solid rgba(61, 53, 32, 0.12) !important;
+  box-shadow: 0 12px 40px rgba(61, 53, 32, 0.12) !important;
 }
 .flatpickr-calendar.open {
   z-index: 1100 !important;
@@ -424,13 +424,13 @@ span.flatpickr-weekday {
 .flatpickr-day:hover,
 .flatpickr-day.prevMonthDay:hover,
 .flatpickr-day.nextMonthDay:hover {
-  background: rgba(232, 77, 122, 0.15) !important;
-  border-color: rgba(232, 77, 122, 0.3) !important;
+  background: rgba(232, 168, 48, 0.2) !important;
+  border-color: rgba(212, 160, 32, 0.35) !important;
 }
 .flatpickr-day.selected,
 .flatpickr-day.startRange,
 .flatpickr-day.endRange {
-  background: linear-gradient(135deg, var(--accent-pink), var(--accent)) !important;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent)) !important;
   border-color: var(--accent) !important;
   color: #fff !important;
 }
@@ -454,8 +454,8 @@ span.flatpickr-weekday {
 }
 .flatpickr-time .numInputWrapper:hover span.arrowUp::after,
 .flatpickr-time .numInputWrapper:hover span.arrowDown::after {
-  border-bottom-color: var(--accent-pink) !important;
-  border-top-color: var(--accent-pink) !important;
+  border-bottom-color: var(--accent) !important;
+  border-top-color: var(--accent) !important;
 }
 
 /* Sobre nosotras */
@@ -479,20 +479,20 @@ span.flatpickr-weekday {
   margin: 0 auto;
   background: var(--bg-card);
   border-radius: 16px;
-  border: 1px solid rgba(45, 38, 64, 0.08);
-  box-shadow: 0 4px 20px rgba(45, 38, 64, 0.06);
+  border: 1px solid rgba(61, 53, 32, 0.08);
+  box-shadow: 0 4px 20px rgba(61, 53, 32, 0.06);
 }
 
 /* Contacto */
 .contacto {
-  background: linear-gradient(135deg, var(--bg-section) 0%, #fce8f0 50%, var(--bg) 100%);
+  background: linear-gradient(135deg, var(--bg-section) 0%, #fff8e0 50%, var(--bg) 100%);
 }
 
 /* Footer */
 .footer {
-  background: linear-gradient(180deg, #f0ecf8 0%, #e8e2f4 100%);
+  background: linear-gradient(180deg, #fdf9eb 0%, #faf4dc 100%);
   padding: 2rem 0 1rem;
-  border-top: 1px solid rgba(232, 77, 122, 0.2);
+  border-top: 1px solid rgba(212, 160, 32, 0.25);
 }
 
 .footer-brand {
@@ -519,13 +519,13 @@ span.flatpickr-weekday {
   background: var(--bg-card);
   color: var(--text);
   font-size: 1.25rem;
-  border: 1px solid rgba(45, 38, 64, 0.1);
-  box-shadow: 0 2px 8px rgba(45, 38, 64, 0.06);
+  border: 1px solid rgba(61, 53, 32, 0.1);
+  box-shadow: 0 2px 8px rgba(61, 53, 32, 0.06);
   transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .redes-sociales a:hover {
-  background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral));
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-amber));
   color: white;
   transform: scale(1.1);
   border-color: transparent;
@@ -534,7 +534,7 @@ span.flatpickr-weekday {
 .footer-bottom {
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(45, 38, 64, 0.1);
+  border-top: 1px solid rgba(61, 53, 32, 0.1);
 }
 
 .footer-bottom small {
@@ -556,7 +556,7 @@ span.flatpickr-weekday {
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5), 0 0 0 0 rgba(255, 107, 157, 0.2);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5), 0 0 0 0 rgba(212, 160, 32, 0.15);
   z-index: 1000;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -564,7 +564,7 @@ span.flatpickr-weekday {
 .whatsapp-float:hover {
   color: white;
   transform: scale(1.08);
-  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6), 0 0 24px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6), 0 0 24px rgba(212, 160, 32, 0.25);
 }
 
 @media (max-width: 768px) {
