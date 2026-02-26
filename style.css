@@ -1,15 +1,17 @@
-/* Variables - paleta colorida */
+/* Variables - tema claro y colorido */
 :root {
-  --bg-dark: #1a1520;
-  --bg-card: #2a2335;
-  --accent: #fec15b;
-  --accent-light: #ffdd8a;
-  --accent-pink: #ff6b9d;
-  --accent-coral: #ff8a65;
-  --accent-purple: #b388ff;
-  --gold: #d4a830;
-  --text: #f5f5f5;
-  --text-muted: #c0b8d0;
+  --bg: #f8f6fc;
+  --bg-card: #ffffff;
+  --bg-section: #f0ecf8;
+  --bg-section-alt: #faf8fd;
+  --accent: #e6a020;
+  --accent-light: #f5c84d;
+  --accent-pink: #e84d7a;
+  --accent-coral: #e8724a;
+  --accent-purple: #9575e6;
+  --gold: #c4921f;
+  --text: #2d2640;
+  --text-muted: #6b6378;
 }
 
 html {
@@ -17,7 +19,7 @@ html {
 }
 
 body {
-  background-color: var(--bg-dark);
+  background-color: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   padding-top: 76px;
@@ -25,9 +27,9 @@ body {
 
 /* Navbar */
 .navbar {
-  background: rgba(26, 21, 32, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 20px rgba(45, 38, 64, 0.08);
 }
 
 .navbar .logo {
@@ -43,11 +45,11 @@ body {
 }
 
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(45, 38, 64, 0.2);
 }
 
 .navbar-toggler-icon {
-  filter: invert(1);
+  filter: none;
 }
 
 .nav-link {
@@ -68,9 +70,9 @@ body {
     105deg,
     transparent 0%,
     transparent 35%,
-    rgba(255, 107, 157, 0.4) 45%,
-    rgba(254, 193, 91, 0.6) 50%,
-    rgba(179, 136, 255, 0.4) 55%,
+    rgba(232, 77, 122, 0.25) 45%,
+    rgba(230, 160, 32, 0.4) 50%,
+    rgba(149, 117, 230, 0.25) 55%,
     transparent 65%,
     transparent 100%
   );
@@ -80,15 +82,13 @@ body {
   transition: opacity 0.25s;
   border-radius: 8px;
   pointer-events: none;
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
 }
 
 .nav-link:hover {
-  color: var(--accent-light) !important;
-  background: rgba(255, 107, 157, 0.2);
-  box-shadow: 
-    0 0 16px rgba(255, 107, 157, 0.35),
-    0 0 8px rgba(254, 193, 91, 0.25);
+  color: var(--accent-pink) !important;
+  background: rgba(232, 77, 122, 0.1);
+  box-shadow: 0 2px 12px rgba(232, 77, 122, 0.2);
 }
 
 .nav-link:hover::before {
@@ -113,12 +113,12 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(135deg, #1a1520 0%, #2d1f3d 40%, #1f1a2e 70%, #1a1520 100%);
+  background: linear-gradient(135deg, #faf8fd 0%, #f0e8fc 35%, #fce8f0 70%, #f8f6fc 100%);
   background-image: 
-    radial-gradient(ellipse at 20% 80%, rgba(255, 107, 157, 0.18) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(254, 193, 91, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(179, 136, 255, 0.1) 0%, transparent 60%),
-    linear-gradient(135deg, #1a1520 0%, #2d1f3d 40%, #1f1a2e 70%, #1a1520 100%);
+    radial-gradient(ellipse at 20% 80%, rgba(232, 77, 122, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(230, 160, 32, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(149, 117, 230, 0.1) 0%, transparent 55%),
+    linear-gradient(135deg, #faf8fd 0%, #f0e8fc 35%, #fce8f0 70%, #f8f6fc 100%);
 }
 
 .hero-overlay {
@@ -153,18 +153,18 @@ body {
 .btn-cta {
   background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent) 50%, var(--accent-coral) 100%);
   border: none;
-  color: #1a1520;
+  color: #fff;
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 50px;
-  box-shadow: 0 4px 24px rgba(255, 107, 157, 0.45), 0 2px 12px rgba(254, 193, 91, 0.3);
+  box-shadow: 0 4px 24px rgba(232, 77, 122, 0.4), 0 2px 12px rgba(230, 160, 32, 0.25);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-cta:hover {
-  color: #1a1520;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 32px rgba(255, 107, 157, 0.5), 0 4px 16px rgba(254, 193, 91, 0.4);
+  box-shadow: 0 6px 32px rgba(232, 77, 122, 0.45), 0 4px 16px rgba(230, 160, 32, 0.3);
 }
 
 /* Secciones comunes */
@@ -189,12 +189,12 @@ body {
 
 /* Servicios */
 .servicios {
-  background: linear-gradient(180deg, var(--bg-dark) 0%, #1f1a28 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-section-alt) 100%);
 }
 
 .servicio-card {
   background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(45, 38, 64, 0.08);
   border-radius: 16px;
   height: 100%;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -202,7 +202,7 @@ body {
 
 .servicio-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(255, 107, 157, 0.25), 0 8px 24px rgba(179, 136, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(232, 77, 122, 0.2), 0 8px 24px rgba(149, 117, 230, 0.12);
 }
 
 .servicio-card .card-body {
@@ -231,19 +231,19 @@ body {
 
 /* Galería */
 .galeria {
-  background: linear-gradient(180deg, #1f1a2e 0%, #251e35 100%);
+  background: linear-gradient(180deg, var(--bg-section) 0%, var(--bg-section-alt) 100%);
 }
 
 .galeria-item {
   aspect-ratio: 1;
   background: var(--bg-card);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(45, 38, 64, 0.08);
 }
 
 /* Testimonios con Swiper */
 .testimonios {
-  background: var(--bg-dark);
+  background: var(--bg);
 }
 
 .swiper-testimonios {
@@ -256,7 +256,7 @@ body {
 
 .testimonio-card {
   background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(45, 38, 64, 0.08);
   border-radius: 16px;
   padding: 1.5rem;
   height: 100%;
@@ -266,7 +266,7 @@ body {
 }
 
 .testimonio-card:hover {
-  box-shadow: 0 8px 28px rgba(255, 107, 157, 0.25), 0 4px 16px rgba(179, 136, 255, 0.15);
+  box-shadow: 0 8px 28px rgba(232, 77, 122, 0.2), 0 4px 16px rgba(149, 117, 230, 0.12);
 }
 
 .testimonio-quote {
@@ -299,7 +299,7 @@ body {
   width: 48px;
   height: 48px;
   background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(45, 38, 64, 0.12);
   border-radius: 50%;
   color: var(--text);
   transition: background 0.2s;
@@ -313,12 +313,13 @@ body {
 .swiper-testimonios .swiper-button-next:hover {
   background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral));
   color: white;
+  border-color: transparent;
 }
 
 .swiper-testimonios .swiper-pagination-bullet {
-  background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  opacity: 0.7;
+  background: var(--bg-section);
+  border: 1px solid rgba(45, 38, 64, 0.2);
+  opacity: 0.8;
 }
 .swiper-testimonios .swiper-pagination-bullet-active {
   background: linear-gradient(135deg, var(--accent-pink), var(--accent));
@@ -328,15 +329,16 @@ body {
 
 /* Reserva */
 .reserva {
-  background: var(--bg-dark);
+  background: var(--bg-section-alt);
 }
 
 .reserva-form {
   background: var(--bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(45, 38, 64, 0.08);
   border-radius: 16px;
   max-width: 560px;
   margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(45, 38, 64, 0.06);
 }
 
 .reserva-form .form-label {
@@ -345,16 +347,16 @@ body {
 }
 
 .reserva-form .form-control {
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  border: 1px solid rgba(45, 38, 64, 0.15);
   color: var(--text);
 }
 
 .reserva-form .form-control:focus {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--bg-card);
   border-color: var(--accent-pink);
   color: var(--text);
-  box-shadow: 0 0 0 0.25rem rgba(255, 107, 157, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(232, 77, 122, 0.2);
 }
 
 .reserva-form .form-control::placeholder {
@@ -362,14 +364,14 @@ body {
 }
 
 .reserva-form .form-select {
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  border: 1px solid rgba(45, 38, 64, 0.15);
   color: var(--text);
 }
 .reserva-form .form-select:focus {
-  background: rgba(0, 0, 0, 0.3);
-  border-color: var(--accent);
-  box-shadow: 0 0 0 0.25rem rgba(254, 193, 91, 0.2);
+  background: var(--bg-card);
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 0.25rem rgba(232, 77, 122, 0.2);
   color: var(--text);
 }
 .reserva-form .form-select option {
@@ -377,25 +379,25 @@ body {
   color: var(--text);
 }
 
-/* Flatpickr: tema negro y amarillo */
+/* Flatpickr: tema claro */
 .reserva-form .flatpickr-input {
-  background: rgba(0, 0, 0, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg) !important;
+  border: 1px solid rgba(45, 38, 64, 0.15);
   color: var(--text);
 }
 .reserva-form .flatpickr-input:focus {
   border-color: var(--accent-pink);
-  box-shadow: 0 0 0 0.25rem rgba(255, 107, 157, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(232, 77, 122, 0.2);
 }
 .reserva-form .input-group-text.reserva-input-icon {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg);
+  border: 1px solid rgba(45, 38, 64, 0.15);
   color: var(--accent-pink);
 }
 .flatpickr-calendar {
   background: var(--bg-card) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(45, 38, 64, 0.12) !important;
+  box-shadow: 0 12px 40px rgba(45, 38, 64, 0.15) !important;
 }
 .flatpickr-calendar.open {
   z-index: 1100 !important;
@@ -422,15 +424,15 @@ span.flatpickr-weekday {
 .flatpickr-day:hover,
 .flatpickr-day.prevMonthDay:hover,
 .flatpickr-day.nextMonthDay:hover {
-  background: rgba(255, 107, 157, 0.25) !important;
-  border-color: rgba(255, 107, 157, 0.4) !important;
+  background: rgba(232, 77, 122, 0.15) !important;
+  border-color: rgba(232, 77, 122, 0.3) !important;
 }
 .flatpickr-day.selected,
 .flatpickr-day.startRange,
 .flatpickr-day.endRange {
   background: linear-gradient(135deg, var(--accent-pink), var(--accent)) !important;
   border-color: var(--accent) !important;
-  color: #1a1520 !important;
+  color: #fff !important;
 }
 .flatpickr-day.flatpickr-disabled {
   color: var(--text-muted) !important;
@@ -448,7 +450,7 @@ span.flatpickr-weekday {
 }
 .flatpickr-time .flatpickr-am-pm {
   color: var(--text) !important;
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: var(--bg) !important;
 }
 .flatpickr-time .numInputWrapper:hover span.arrowUp::after,
 .flatpickr-time .numInputWrapper:hover span.arrowDown::after {
@@ -458,7 +460,7 @@ span.flatpickr-weekday {
 
 /* Sobre nosotras */
 .sobre-nosotras {
-  background: var(--bg-dark);
+  background: var(--bg-section-alt);
 }
 
 .sobre-nosotras .section-title {
@@ -477,19 +479,20 @@ span.flatpickr-weekday {
   margin: 0 auto;
   background: var(--bg-card);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(45, 38, 64, 0.08);
+  box-shadow: 0 4px 20px rgba(45, 38, 64, 0.06);
 }
 
 /* Contacto */
 .contacto {
-  background: linear-gradient(135deg, #2d1f3d 0%, #1a1520 50%, #251e35 100%);
+  background: linear-gradient(135deg, var(--bg-section) 0%, #fce8f0 50%, var(--bg) 100%);
 }
 
 /* Footer */
 .footer {
-  background: linear-gradient(180deg, #15101a 0%, #0d0a12 100%);
+  background: linear-gradient(180deg, #f0ecf8 0%, #e8e2f4 100%);
   padding: 2rem 0 1rem;
-  border-top: 1px solid rgba(255, 107, 157, 0.15);
+  border-top: 1px solid rgba(232, 77, 122, 0.2);
 }
 
 .footer-brand {
@@ -516,6 +519,8 @@ span.flatpickr-weekday {
   background: var(--bg-card);
   color: var(--text);
   font-size: 1.25rem;
+  border: 1px solid rgba(45, 38, 64, 0.1);
+  box-shadow: 0 2px 8px rgba(45, 38, 64, 0.06);
   transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
@@ -523,12 +528,13 @@ span.flatpickr-weekday {
   background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral));
   color: white;
   transform: scale(1.1);
+  border-color: transparent;
 }
 
 .footer-bottom {
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(45, 38, 64, 0.1);
 }
 
 .footer-bottom small {
