@@ -43,8 +43,8 @@
   <section id="inicio" class="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <h1 class="hero-title">GlitterPower</h1>
-      <p class="hero-subtitle">Maquillaje con glitter para fiestas y eventos</p>
+      <h1 class="hero-title">Glitter Power</h1>
+      <p class="hero-subtitle">El brillo que le pone alegría a tu fiesta ✨</p>
       <a class="btn btn-cta" href="#reserva">Reservar ahora</a>
     </div>
   </section>
@@ -53,7 +53,7 @@
   <section id="servicios" class="section servicios">
     <div class="container">
       <h2 class="section-title">Nuestros servicios</h2>
-      <p class="section-subtitle">Maquillaje profesional para que brilles en cada ocasión</p>
+      <p class="section-subtitle">Todo lo que necesitás para que tu evento brille de verdad</p>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card servicio-card">
@@ -90,7 +90,7 @@
   <section id="galeria" class="section galeria">
     <div class="container">
       <h2 class="section-title">Galería</h2>
-      <p class="section-subtitle">Algunos de nuestros trabajos</p>
+      <p class="section-subtitle">Momentos que ya hicimos brillar</p>
       <div class="row g-3">
         <div class="col-6 col-md-4"><div class="galeria-item overflow-hidden">
           <img class="galeria-img" src="src/469040692_18048953186491899_5130774398411881099_n.jpg" alt="GlitterPower">
@@ -114,12 +114,37 @@
     </div>
   </section>
 
+  <!-- Instagram destacado -->
+  <section id="instagram" class="section instagram-section">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6 order-lg-2">
+          <div class="instagram-embed-wrap">
+            <!-- Reemplazá la URL por el enlace de tu publicación de Instagram -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C5GxDznLNzF/" data-instgrm-version="14" style="max-width:540px; min-width:280px;">
+            </blockquote>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <h2 class="section-title">Seguinos en Instagram</h2>
+          <p class="instagram-section-text">Mostramos nuestros looks, ideas que inspiran y toda la magia del glitter para tu evento. Encontrá brillo, color y novedades, y no te olvides de etiquetarnos en tus fotos como <strong>@glitterpoweruy</strong> ✨</p>
+          <p class="instagram-section-sub mb-2">Si te gustó este trabajo, reservá tu turno y llevamos alegría a tu fiesta.</p>
+          <a class="btn btn-cta mt-2" href="#reserva" role="button">Reservar turno</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonios con Swiper -->
   <section id="testimonios" class="section testimonios">
     <div class="container">
       <h2 class="section-title">Lo que dicen nuestras clientas</h2>
-      <p class="section-subtitle">Testimonios reales</p>
+      <p class="section-subtitle">Quienes ya brillaron con nosotras ✨</p>
       <div class="swiper swiper-testimonios">
+        <div class="swiper-button-container d-flex justify-content-end">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="testimonio-card">
@@ -178,8 +203,6 @@
             </div>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -189,16 +212,25 @@
   <section id="reserva" class="section reserva">
     <div class="container">
       <div class="reserva-form card">
-        <div class="card-body">
+        <div class="card-body py-5">
           <div class="row justify-content-center">
             <div class="col-md-10">
               <h2 class="section-title">Agendá tu turno</h2>
-              <p class="section-subtitle">Elegí fecha y hora para tu reserva (posterior a hoy)</p>
-              <label for="reservaDateTime" class="form-label">Fecha y hora</label>
-              <div class="input-group">
+              <p class="section-subtitle">Reservá tu momento de brillo ✨</p>
+              <label for="reservaDateTime" class="form-label">Fecha y hora en que necesitás el servicio</label>
+              <p class="form-text small mb-1 text-white">Esta es la hora en la que quieres que estemos para maquillar.</p>
+              <div class="input-group mb-3">
                 <span class="input-group-text reserva-input-icon"><i class="bi bi-calendar3"></i></span>
                 <input type="text" class="form-control form-control-lg" id="reservaDateTime" placeholder="Elegí fecha y hora" readonly>
               </div>
+            </div>
+            <div class="col-md-10">
+              <label for="reservaCantidadPersonas" class="form-label">Cantidad de personas</label>
+              <div class="input-group">
+                <span class="input-group-text reserva-input-icon"><i class="bi bi-people"></i></span>
+                <input type="number" class="form-control form-control-lg" id="reservaCantidadPersonas" min="1" max="500" placeholder="Ej: 10" aria-describedby="reservaCantidadHelp">
+              </div>
+              <div id="reservaCantidadHelp" class="form-text small text-white mb-3">Número aproximado de invitados o personas a maquillar en el evento.</div>
             </div>
             <div class="col-md-10">
               <label for="reservaTipoFiesta" class="form-label">Tipo de evento</label>
@@ -234,8 +266,8 @@
       <div class="row align-items-center">
         <div class="col-lg-6">
           <h2 class="section-title">Sobre GlitterPower</h2>
-          <p>Somos un equipo apasionado por el maquillaje artístico y el glitter. Nos especializamos en crear looks únicos para fiestas, cumpleaños y eventos, con productos seguros y de calidad.</p>
-          <p>Creemos que cada ocasión merece un toque de brillo. ¡Contáctanos y hagamos que tu evento sea inolvidable!</p>
+          <p>Somos Carli y Belu, un equipo apasionado por el maquillaje artístico y el glitter. Con más de 5 años de experiencia, hemos participado en más de 200 eventos y maquillado a más de 3000 personas, creando looks únicos para fiestas, cumpleaños y celebraciones con productos seguros y de calidad.</p>
+          <p>Gracias a nuestro trabajo, logramos consolidar GlitterPower como un emprendimiento destacado en el mundo de las fiestas. Porque cada ocasión merece su momento de brillo y alegría ✨</p>
         </div>
         <div class="col-lg-6 text-center">
           <div class="sobre-imagen overflow-hidden">
@@ -250,8 +282,8 @@
   <section id="contacto" class="section contacto">
     <div class="container text-center">
       <h2 class="section-title">Contacto</h2>
-      <p class="section-subtitle">¿Lista para brillar? Escríbenos y te respondemos al instante.</p>
-      <a class="btn btn-cta btn-lg" href="https://wa.me/5491112345678" target="_blank" rel="noopener">
+      <p class="section-subtitle">¿Lista para brillar y llenar tu fiesta de alegría? Escríbenos ✨</p>
+      <a class="btn btn-cta btn-lg" href="https://wa.me/59891683527" target="_blank" rel="noopener">
         <i class="bi bi-whatsapp me-2"></i>Contactar por WhatsApp
       </a>
     </div>
@@ -273,13 +305,13 @@
         </div>
       </div>
       <div class="footer-bottom text-center">
-        <small>&copy; GlitterPower. Maquillaje para fiestas y eventos.</small>
+        <small>&copy; Desarrollado por <a href="https://www.appsolutos.com/" target="_blank" rel="noopener">AppSolutos.com</a></small>
       </div>
     </div>
   </footer>
 
   <!-- Botón flotante WhatsApp -->
-  <a class="whatsapp-float" href="https://wa.me/5491112345678" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/59891683527" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
@@ -288,6 +320,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.min.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
   <script src="index.js"></script>
 </body>
 

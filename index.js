@@ -2,7 +2,7 @@
  * GlitterPower - Scripts principales
  */
 
-var WHATSAPP_NUMBER = '59891642621';
+var WHATSAPP_NUMBER = '59891683527';
 
 document.addEventListener('DOMContentLoaded', function () {
   initSwiper();
@@ -114,6 +114,8 @@ function initReserva() {
     ocultarError();
     var selected = fp.selectedDates[0];
     var tipoFiesta = (document.getElementById('reservaTipoFiesta') || {}).value || '';
+    var cantidadEl = document.getElementById('reservaCantidadPersonas');
+    var cantidad = cantidadEl ? cantidadEl.value.trim() : '';
 
     if (!selected) {
       mostrarError('Por favor elegí una fecha y hora.');
@@ -127,6 +129,11 @@ function initReserva() {
       mostrarError('Por favor elegí el tipo de evento.');
       return;
     }
+    var numPersonas = parseInt(cantidad, 10);
+    if (!cantidad || isNaN(numPersonas) || numPersonas < 1) {
+      mostrarError('Por favor indicá la cantidad de personas (mínimo 1).');
+      return;
+    }
 
     var dd = String(selected.getDate()).padStart(2, '0');
     var mm = String(selected.getMonth() + 1).padStart(2, '0');
@@ -135,7 +142,11 @@ function initReserva() {
     var min = String(selected.getMinutes()).padStart(2, '0');
     var fechaLega = dd + '/' + mm + '/' + yyyy;
     var hora = hh + ':' + min;
-    var mensaje = '¡Hola! He visto tu sitio web y me gustaría agendar una reserva en GlitterPower para el ' + fechaLega + ' a las ' + hora + '.\nTipo de evento: ' + tipoFiesta.trim() + '.\n¡Gracias!';
+    var mensaje = '¡Hola! He visto tu sitio web y me gustaría agendar una reserva en GlitterPower.\n\n' +
+      '• Fecha: ' + fechaLega + '\n' +
+      '• Hora en que necesito el servicio (maquillaje): ' + hora + '\n' +
+      '• Tipo de evento: ' + tipoFiesta.trim() + '\n' +
+      '• Cantidad de personas: ' + numPersonas + '\n\n¡Gracias!';
     var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(mensaje);
     window.open(url, '_blank', 'noopener');
   });
