@@ -254,8 +254,7 @@ body {
 .numeros-section {
   background: linear-gradient(180deg, var(--bg-dark) 0%, #1f1a2e 50%, var(--bg-dark) 100%);
   background-image:
-    radial-gradient(ellipse at 50% 0%, rgba(254, 193, 91, 0.08) 0%, transparent 50%),
-    linear-gradient(180deg, var(--bg-dark) 0%, #1f1a2e 50%, var(--bg-dark) 100%);
+  radial-gradient(ellipse at 50% 0%, rgb(209 91 254 / 8%) 0%, transparent 50%), linear-gradient(180deg, var(--bg-dark) 0%, #1f1a2e 50%, var(--bg-dark) 100%);
 }
 
 .numeros-item {
