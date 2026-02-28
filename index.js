@@ -5,9 +5,29 @@
 var WHATSAPP_NUMBER = '59891683527';
 
 document.addEventListener('DOMContentLoaded', function () {
+  initNavbarMobile();
   initSwiper();
   initReserva();
+  initNumeros();
 });
+
+/**
+ * Navbar móvil: cerrar menú al hacer clic en un enlace
+ */
+function initNavbarMobile() {
+  var collapseEl = document.getElementById('navbarNav');
+  var navLinks = document.querySelectorAll('#navbarNav .nav-link');
+  if (!collapseEl || !navLinks.length) return;
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 992) {
+        var collapse = bootstrap.Collapse.getInstance(collapseEl);
+        if (collapse) collapse.hide();
+      }
+    });
+  });
+}
 
 /**
  * Carrusel de testimonios (Swiper)
@@ -150,4 +170,65 @@ function initReserva() {
     var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(mensaje);
     window.open(url, '_blank', 'noopener');
   });
+}
+
+/**
+ * Sección Números: count-up cuando la sección aparece en pantalla (JS puro)
+ */
+function initNumeros() {
+  var section = document.getElementById('numeros');
+  if (!section) return;
+
+  var ids = ['countAnos', 'countEventos', 'countPersonas'];
+
+  function runCounters() {
+    ids.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var end = parseInt(el.getAttribute('data-end'), 10);
+      var prefix = el.getAttribute('data-prefix') || '';
+      if (isNaN(end)) return;
+      animateValue(el, 0, end, 2000, prefix);
+    });
+  }
+
+  function animateValue(element, start, end, duration, prefix) {
+    var startTime = null;
+    var separator = '.';
+
+    function formatNum(n) {
+      return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+    }
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var elapsed = timestamp - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var easeOut = 1 - Math.pow(1 - progress, 2);
+      var current = Math.floor(start + (end - start) * easeOut);
+      element.textContent = prefix + formatNum(current);
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        element.textContent = prefix + formatNum(end);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          runCounters();
+          observer.disconnect();
+          break;
+        }
+      }
+    },
+    { threshold: 0.15, rootMargin: '0px' }
+  );
+
+  observer.observe(section);
 }
